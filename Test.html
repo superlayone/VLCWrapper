@@ -1,0 +1,22 @@
+<!--
+  
+-->
+<!DOCTYPE html>
+<html>
+<title>VLC IE plugin test page</title>
+<script src="js/VLCWrapper.js"></script>
+<script src="js/jquery.min.js"></script>
+<body>
+	<!--
+	Add this to use vlc activeX plugin
+	-->
+	<OBJECT id="vlc" classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921" width="640" height="480" id="vlc" events="True">
+	   <param name="Src" id="rtspaddr" value="" />
+	   <param name="ShowDisplay" value="True" />
+	   <param name="AutoLoop" value="False" />
+	   <param name="AutoPlay" value="False" />
+   </OBJECT>
+   <br>
+   <input id='uri' value='rtsp://219.245.64.33/oceans.webm' size=70 type='text'><button onclick="VLCobject.doPlay('vlc','rtspaddr' , $('#uri').val())">Play</button>
+</body>
+</html> 
